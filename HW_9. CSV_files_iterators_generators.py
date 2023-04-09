@@ -3,9 +3,8 @@ import csv
 
 # Task_1
 def read_csv_file(file_name):
-    """
-    Reads a CSV file and returns a list of strings.
-    """
+    
+  
     with open(file_name, 'r') as file:
         reader = csv.reader(file)
         lines = []
@@ -15,9 +14,7 @@ def read_csv_file(file_name):
 
 
 def write_to_csv_file(file_name, lines):
-    """
-    Writes a list of strings to a CSV file.
-    """
+
     with open(file_name, 'w', newline='') as file:
         writer = csv.writer(file)
         for line in lines:
