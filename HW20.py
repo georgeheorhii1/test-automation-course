@@ -6,7 +6,8 @@ def test_check_click(driver):
     driver.get('https://www.olx.ua/uk/')
     product = Product2(driver)
 
-    element = product._wait_until_element_appears((By.XPATH, '//span[@class="cat-icon cat-icon-circle category-2 cat-icon-promo"]'))
+    element = product._wait_until_element_appears((By.XPATH, '//span[@class="cat-icon cat-icon-circle category-2 '
+                                                             'cat-icon-promo"]'))
     assert element.is_displayed()
     element.click()
     assert element.is_enabled()
